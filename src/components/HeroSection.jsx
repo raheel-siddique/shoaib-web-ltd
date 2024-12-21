@@ -6,15 +6,14 @@ import { useGlobalContext } from "../context";
 
 const HeroSection = () => {
   const { name, image } = useGlobalContext();
-
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
         <div className="section-hero-data">
-          <p className="hero-top-data">THIS IS MY COMPANY</p>
+          <p className="hero-top-data" style={{color:'rgb(98 84 243)'}}>THIS IS OUR COMPANY</p>
           <h1 className="hero-heading">Shoaib Saleem Ltd</h1>
           <p className="hero-para">
-            I'm {name}. A Full stack Developer, youtuber and freelancer. A Full
+            I'm Shoaib Saleem. A Full stack Developer, youtuber and freelancer. A Full
             stack Developer, youtuber and freelancer.
           </p>
           <Button className="btn hireme-btn">
@@ -55,7 +54,7 @@ const Wrapper = styled.section`
 
   .hero-heading {
     text-transform: uppercase;
-    font-size: 6.4rem;
+    font-size: 8.4rem;
   }
 
   .hero-para {
