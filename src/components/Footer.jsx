@@ -16,7 +16,7 @@ const Footer = () => {
 
           <div className="contact-short-btn">
             <NavLink to="/">
-              <Button>Get Started</Button>
+              <Button>About Us</Button>
             </NavLink>
           </div>
         </div>

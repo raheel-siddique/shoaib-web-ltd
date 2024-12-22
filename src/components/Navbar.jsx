@@ -48,13 +48,14 @@ const Navbar = () => {
         background-color: #fff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 2rem;
+        // width:300px
         z-index: 10;
 
         li {
           margin:1.3rem 0;
 
           .navbar-link {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
 
             &:hover {
               color: ${({ theme }) => theme.colors.helper};
@@ -178,45 +179,63 @@ const Navbar = () => {
             onMouseLeave={() => setOpenDropdown(false)}
             className="dropdown-container"
           >
-            <NavLink
-              className={({ isActive }) =>
-            "navbar-link"
-              }
-              onClick={() => setOpenMenu(false)}
-              to="#"
-            >
+            <NavLink 
+             className={({ isActive }) =>
+              isActive ? "navbar-link active" : "navbar-link"
+            }
+            to="javascript:void(0)">
               Services
             </NavLink>
             <ul className={`dropdown-menu ${openDropdown ? "show" : ""}`}>
               <li>
-                <NavLink
-                  className="navbar-link"
-                  onClick={() => setOpenMenu(false)}
-                  to="/service/web-development"
-                >
-                  Web Development
+                <NavLink className="navbar-link" to="/service/hr-management">
+                  Human Resource Management
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="navbar-link" to="/service/payroll-management">
+                  Payroll Management
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   className="navbar-link"
-                  onClick={() => setOpenMenu(false)}
-                  to="/service/mobile-development"
+                  to="/service/business-consultancy"
                 >
-                  Mobile Development
+                  Business Management Consultancy
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="navbar-link" to="/service/patent-copyright">
+                  Patent and Copyright Services
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   className="navbar-link"
-                  onClick={() => setOpenMenu(false)}
-                  to="/service/digital-marketing"
+                  to="/service/compliance-legal"
                 >
-                  Digital Marketing
+                  Compliance and Legal Advisory
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="navbar-link"
+                  to="/service/training-development"
+                >
+                  Training and Development Programs
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="navbar-link"
+                  to="/service/performance-analysis"
+                >
+                  Performance and Productivity Analysis
                 </NavLink>
               </li>
             </ul>
-          </li> 
+          </li>
           <li>
             <NavLink
               className={({ isActive }) =>

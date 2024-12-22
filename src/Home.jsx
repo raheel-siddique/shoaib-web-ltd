@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <HeroSection />
       <Services />
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 };

@@ -13,11 +13,11 @@ const HeroSection = () => {
           <p className="hero-top-data" style={{color:'rgb(98 84 243)'}}>THIS IS OUR COMPANY</p>
           <h1 className="hero-heading">Shoaib Saleem Ltd</h1>
           <p className="hero-para">
-            I'm Shoaib Saleem. A Full stack Developer, youtuber and freelancer. A Full
-            stack Developer, youtuber and freelancer.
+          Welcome to Shoaib Saleem Ltd – Your Trusted Partner in Human Resource and Business Management Solutions.
+Empowering your business with expertise in HR Management, Payroll Services, Business Consultancy, and Intellectual Property Solutions.
           </p>
           <Button className="btn hireme-btn">
-            <NavLink to="/contact"> hire me </NavLink>
+            <NavLink to="/contact"> Our Services </NavLink>
           </Button>
         </div>
 
@@ -42,7 +42,7 @@ const Wrapper = styled.section`
   }
 
   .btn {
-    max-width: 16rem;
+    max-width: 20rem;
   }
 
   .hero-top-data {
