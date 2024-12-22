@@ -28,11 +28,11 @@ const Footer = () => {
         <div className="container grid grid-four-column">
           <div className="footer-about">
             <h3>Shoaib Saleem Ltd</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <p>Ready to elevate your business? Get in touch with us today for customized solutions that cater to your unique needs!.</p>
           </div>
 
           {/* 2nd column */}
-          <div className="footer-subscribe">
+          {/* <div className="footer-subscribe">
             <h3>Subscribe to get important updates</h3>
             <form action="#">
               <input
@@ -43,10 +43,10 @@ const Footer = () => {
               />
               <input type="submit" value="Subscribe" />
             </form>
-          </div>
+          </div> */}
 
           {/* 3rs column  */}
-          <div className="footer-social">
+          {/* <div className="footer-social">
             <h3>Follows Us</h3>
             <div className="footer-social--icons">
               <div>
@@ -63,13 +63,13 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* 4th column  */}
-          <div className="footer-contact">
+          {/* <div className="footer-contact">
             <h3>Call Us</h3>
             <h3>+91 12345678978</h3>
-          </div>
+          </div> */}
         </div>
 
         {/* bottom section  */}
@@ -79,10 +79,10 @@ const Footer = () => {
             <p>
               @{new Date().getFullYear()} Shoaib Saleem Ltd. All Rights Reserved
             </p>
-            <div>
+            {/* <div>
               <p>PRIVACY POLICY</p>
               <p>TERMS & CONDITIONS</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

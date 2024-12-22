@@ -1,29 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { Button } from "./styles/Button";
+import { Button } from "../styles/Button";
+import { services } from "../utils/constant";
 
-const Services = () => {
+const ServicesCom = () => {
 
 
-
-  console.log(services);
+  
 
   return (
     <Wrapper className="section">
       <h2 className="common-heading">Our Comprehensive Services</h2>
       <div className="container grid grid-three-column">
         {services.map((curElem) => {
-          const { id, name, image, description } = curElem;
+          const { id, name, image, description , slug} = curElem;
           return (
             <div key={id} className="card">
-              <figure>
-                <img src={image} alt={name} />
+              <figure style={{width:"100%"}}>
+                <img style={{width:"100%"}} src={image} alt={name} />
               </figure>
               <div className="card-data">
                 <h3>{name}</h3>
                 <p>{description}</p>
-                <NavLink to="/service">
+                <NavLink to={`/service/${slug}`}>
                   <Button className="btn">Read More</Button>
                 </NavLink>
               </div>
@@ -118,4 +118,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Services;
+export default ServicesCom;

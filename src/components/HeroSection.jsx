@@ -4,20 +4,19 @@ import styled from "styled-components";
 import { Button } from "../styles/Button";
 import { useGlobalContext } from "../context";
 
-const HeroSection = () => {
+const HeroSection = ({topTitle,mainTitle, mainDescription}) => {
   const { name, image } = useGlobalContext();
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
         <div className="section-hero-data">
-          <p className="hero-top-data" style={{color:'rgb(98 84 243)'}}>THIS IS OUR COMPANY</p>
-          <h1 className="hero-heading">Shoaib Saleem Ltd</h1>
+          <p className="hero-top-data" style={{color:'rgb(98 84 243)'}}>{topTitle}</p>
+          <h1 className="hero-heading">{mainTitle}</h1>
           <p className="hero-para">
-          Welcome to Shoaib Saleem Ltd – Your Trusted Partner in Human Resource and Business Management Solutions.
-Empowering your business with expertise in HR Management, Payroll Services, Business Consultancy, and Intellectual Property Solutions.
+          {mainDescription}
           </p>
           <Button className="btn hireme-btn">
-            <NavLink to="/contact"> Our Services </NavLink>
+            <NavLink to="/"> Our Services </NavLink>
           </Button>
         </div>
 

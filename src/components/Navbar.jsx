@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { CgMenu, CgCloseR } from "react-icons/cg";
+import { services } from "../utils/constant";
+
+
+
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -187,53 +191,18 @@ const Navbar = () => {
               Services
             </NavLink>
             <ul className={`dropdown-menu ${openDropdown ? "show" : ""}`}>
-              <li>
-                <NavLink className="navbar-link" to="/service/hr-management">
-                  Human Resource Management
+
+              {services.map((myServices)=>{
+               return(
+                <li>
+                <NavLink className="navbar-link" to={`/service/${myServices.slug}`}>
+                  {myServices.name}
                 </NavLink>
               </li>
-              <li>
-                <NavLink className="navbar-link" to="/service/payroll-management">
-                  Payroll Management
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="navbar-link"
-                  to="/service/business-consultancy"
-                >
-                  Business Management Consultancy
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="navbar-link" to="/service/patent-copyright">
-                  Patent and Copyright Services
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="navbar-link"
-                  to="/service/compliance-legal"
-                >
-                  Compliance and Legal Advisory
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="navbar-link"
-                  to="/service/training-development"
-                >
-                  Training and Development Programs
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="navbar-link"
-                  to="/service/performance-analysis"
-                >
-                  Performance and Productivity Analysis
-                </NavLink>
-              </li>
+               ) 
+              })}
+             
+           
             </ul>
           </li>
           <li>
